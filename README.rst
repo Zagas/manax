@@ -27,6 +27,7 @@ Features
 ---------
 
 * For Django 1.9
+* Choice between SQLite and PostgreSQL backend
 * Renders Django projects with 100% starting test coverage
 * Twitter Bootstrap_ v4.0.0 - alpha_
 * 12-Factor_ based settings via django-environ_
