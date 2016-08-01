@@ -100,11 +100,7 @@ MANAGERS = ADMINS
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#databases
 DATABASES = {
     # Raises ImproperlyConfigured exception if DATABASE_URL not in os.environ
-    {% if cookiecutter.db_backend == 'sqlite' %}
-    'default': env.db('DATABASE_URL', default='sqlite:////tmp/my-tmp-sqlite.db'),
-    {%elif cookiecutter.db_backend == 'postgresql' %}
     'default': env.db('DATABASE_URL', default='postgres://{% if cookiecutter.windows == 'y' %}localhost{% endif %}/{{cookiecutter.project_slug}}'),
-    {% endif %}
 }
 DATABASES['default']['ATOMIC_REQUESTS'] = True
 
