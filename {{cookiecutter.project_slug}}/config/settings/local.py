@@ -12,6 +12,16 @@ from .common import *  # noqa
 import socket
 import os
 
+{% if cookiecutter.db_backend == 'sqlite' %}
+# DATABASE CONFIGURATION
+# ------------------------------------------------------------------------------
+# See: https://docs.djangoproject.com/en/dev/ref/settings/#databases
+DATABASES = {
+    # Raises ImproperlyConfigured exception if DATABASE_URL not in os.environ
+    'default': env.db('DATABASE_URL', default='sqlite:////tmp/my-tmp-sqlite.db'),
+}
+{% endif %}
+
 # DEBUG
 # ------------------------------------------------------------------------------
 DEBUG = env.bool('DJANGO_DEBUG', default=True)

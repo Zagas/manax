@@ -7,6 +7,7 @@
     "domain_name": "example.com",
     "version": "0.1.0",
     "timezone": "UTC",
+    "db_backend": ["sqlite", "postgresql"],
     "use_whitenoise": "y",
     "use_celery": "n",
     "use_mailhog": "n",
