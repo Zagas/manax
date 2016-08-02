@@ -13,4 +13,4 @@ First, get Cookiecutter. Trust me, it's awesome::
 
 Now run it against this repo::
 
-    $ cookiecutter https://github.com/manzag/manax.git --checkout manax
+    $ cookiecutter https://github.com/manazag/manax.git --checkout manax
